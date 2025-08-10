@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
 import { Toaster, toast } from 'react-hot-toast';
-import { 
-  Sparkles, 
-  Mic, 
-  Twitter, 
-  Save, 
-  Copy, 
-  Download,
-  Upload,
-  Play,
-  Pause
-} from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import AudioUpload from './components/AudioUpload';
 import RemixButtons from './components/RemixButtons';
 import OutputDisplay from './components/OutputDisplay';
