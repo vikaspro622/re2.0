@@ -41,12 +41,14 @@ export const callOpenRouter = async (
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 30000);
 
+    const referer = typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000';
+
     const response = await fetch(API_CONFIG.OPENROUTER_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${API_CONFIG.OPENROUTER_API_KEY}`,
-        'HTTP-Referer': 'http://localhost:3000',
+        'HTTP-Referer': referer,
         'X-Title': 'Remixer App',
       },
       body: JSON.stringify({
