@@ -6,6 +6,11 @@ import RemixButtons from './components/RemixButtons';
 import OutputDisplay from './components/OutputDisplay';
 import { callOpenRouter } from './config/api';
 
+console.log('=== ENV DEBUG ===');
+console.log('API Key:', process.env.REACT_APP_OPENROUTER_API_KEY);
+console.log('Starts with sk-or?', process.env.REACT_APP_OPENROUTER_API_KEY?.startsWith('sk-or-'));
+console.log('================');
+
 function App() {
   const [inputText, setInputText] = useState('');
   const [outputText, setOutputText] = useState('');
